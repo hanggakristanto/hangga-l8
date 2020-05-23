@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//home
+Route::livewire('/', 'console.login')->layout('layouts.auth');
+
+Route::prefix('console')->group(function () {
+
+    Route::group(['middleware' => 'auth'], function(){
+
+        //login page
+        Route::livewire('/login', 'console.login')
+        ->layout('layouts.auth')->name('console.login');
+
+        //console dashboard
+
+    });
+
 });
