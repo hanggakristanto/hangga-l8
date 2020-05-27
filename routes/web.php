@@ -16,15 +16,31 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::livewire('/', 'console.login')->layout('layouts.auth');
 
+    //login page
+    Route::livewire('/login', 'console.login')
+    ->layout('layouts.auth')->name('console.login');
+
 Route::prefix('console')->group(function () {
 
     Route::group(['middleware' => 'auth'], function(){
 
-        //login page
-        Route::livewire('/login', 'console.login')
-        ->layout('layouts.auth')->name('console.login');
+        //logout page
+        Route::livewire('/logout', 'console.logout')
+        ->layout('layouts.console')->name('console.logout');
 
         //console dashboard
+        Route::livewire('/dashboard', 'console.dashboard.index')
+        ->layout('layouts.console')->name('console.dashboard.index');
+
+        //console users
+        Route::livewire('/users', 'console.users.index')
+        ->layout('layouts.console')->name('console.users.index');
+
+        Route::livewire('/users/create', 'console.users.create')
+        ->layout('layouts.console')->name('console.users.create');
+
+        Route::livewire('/users/edit/{id}', 'console.users.edit')
+        ->layout('layouts.console')->name('console.users.edit');
 
     });
 

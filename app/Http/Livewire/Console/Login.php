@@ -25,10 +25,10 @@ class Login extends Component
 
         if(auth()->attempt(['email' => $this->email, 'password'=> $this->password])) {
 
-            return redirect()->route('console.dashboard');
+            return redirect()->route('console.dashboard.index');
 
         } else {
-            session()->flash('message', 'Alamat Email atau Password Anda salah.');
+            session()->flash('message', 'Your Email Address or Password is incorrect.');
             return redirect()->route('console.login');
         }
 

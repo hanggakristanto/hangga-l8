@@ -19306,6 +19306,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var Turbolinks = __webpack_require__(/*! turbolinks */ "./node_modules/turbolinks/dist/turbolinks.js");
 
 Turbolinks.start();
+$(document).on('turbolinks:load', function () {
+  $('.dropdown-toggle').dropdown();
+});
 
 /***/ }),
 
