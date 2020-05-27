@@ -10,3 +10,7 @@
   border-color: #252f3f;
 }
 
+.form-group label {
+  font-weight: bold;
+}
+

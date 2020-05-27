@@ -60,7 +60,11 @@ Route::prefix('console')->group(function () {
         ->layout('layouts.console')->name('console.categories.create');
 
         Route::livewire('/categories/edit/{id}', 'console.categories.edit')
-        ->layout('layouts.console')->name('console.categories.edit');        
+        ->layout('layouts.console')->name('console.categories.edit');      
+        
+        //console settings
+        Route::livewire('/settings', 'console.settings.index')
+        ->layout('layouts.console')->name('console.settings.index');
 
     });
 

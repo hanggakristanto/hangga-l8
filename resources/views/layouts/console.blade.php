@@ -60,14 +60,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-clone"></i> Pages</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-image"></i> Galeri</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-laptop"></i> Sliders</a>
                 </li>
                 <li class="nav-item {{ setActive('console/users') }}">
                     <a class="nav-link" href="{{ route('console.users.index') }}"><i class="fa fa-users"></i> Users</a>
+                </li>
+                <li class="nav-item {{ setActive('console/settings') }}">
+                    <a class="nav-link" href="{{ route('console.settings.index') }}"><i class="fa fa-cog"></i> Settings</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
