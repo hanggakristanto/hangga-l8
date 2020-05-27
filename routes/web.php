@@ -52,6 +52,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/tags/edit/{id}', 'console.tags.edit')
         ->layout('layouts.console')->name('console.tags.edit');
 
+        //console categories
+        Route::livewire('/categories', 'console.categories.index')
+        ->layout('layouts.console')->name('console.categories.index');
+
+        Route::livewire('/categories/create', 'console.categories.create')
+        ->layout('layouts.console')->name('console.categories.create');
+
+        Route::livewire('/categories/edit/{id}', 'console.categories.edit')
+        ->layout('layouts.console')->name('console.categories.edit');        
+
     });
 
 });
