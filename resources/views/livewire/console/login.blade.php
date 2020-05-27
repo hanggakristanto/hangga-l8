@@ -1,3 +1,6 @@
+@section('title')
+Login &mdash; {{ $setting->admin_title }}
+@endsection
 
 <div class="card border-0 shadow rounded-lg mb-3">
     <div class="card-body">

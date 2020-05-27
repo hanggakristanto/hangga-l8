@@ -1,3 +1,7 @@
+@section('title')
+Edit Category &mdash; {{ $setting->admin_title }}
+@endsection
+
 <div class="row justify-content-center">
     <div class="col-md-12">
         @if (session()->has('error'))

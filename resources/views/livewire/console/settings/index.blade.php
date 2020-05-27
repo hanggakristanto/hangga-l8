@@ -1,3 +1,7 @@
+@section('title')
+Settings &mdash; {{ $setting->admin_title }}
+@endsection
+
 <div class="row justify-content-center">
     <div class="col-md-8">
         @if (session()->has('message'))

@@ -1,3 +1,6 @@
+@section('title')
+Dashboard &mdash; {{ $setting->admin_title }}
+@endsection
 
 <div class="row justify-content-center">
    <div class="col-md-6 mb-5">

@@ -69,3 +69,8 @@ Route::prefix('console')->group(function () {
     });
 
 });
+
+View::composer('*', function($view) {
+    $setting = \App\Setting::find(1);
+    $view->with('setting', $setting);
+});
