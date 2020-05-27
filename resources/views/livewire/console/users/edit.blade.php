@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
-                <i class="fa fa-users"></i> ADD USERS
+                <i class="fa fa-users"></i> EDIT USER
             </div>
             <div class="card-body">
                 <form wire:submit.prevent="update">

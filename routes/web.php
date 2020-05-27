@@ -42,6 +42,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/users/edit/{id}', 'console.users.edit')
         ->layout('layouts.console')->name('console.users.edit');
 
+        //console tags
+        Route::livewire('/tags', 'console.tags.index')
+        ->layout('layouts.console')->name('console.tags.index');
+
+        Route::livewire('/tags/create', 'console.tags.create')
+        ->layout('layouts.console')->name('console.tags.create');
+
+        Route::livewire('/tags/edit/{id}', 'console.tags.edit')
+        ->layout('layouts.console')->name('console.tags.edit');
+
     });
 
 });

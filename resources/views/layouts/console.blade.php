@@ -26,7 +26,7 @@
 <body style="background-color: #e2e8f0;">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #252f3f!important">
-        <a class="navbar-brand font-weight-bold" href="#"><i class="fa fa-shopping-basket"></i> SK STORE</a>
+        <a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><i class="fa fa-shopping-basket"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,11 +37,11 @@
                 <li class="nav-item {{ setActive('console/dashboard') }}">
                     <a class="nav-link" href="{{ route('console.dashboard.index') }}"><i class="fa fa-chart-line"></i> Analytic</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown {{ setActive('console/tags') }}">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag"></i> Products</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Tags</a>
+                        <a class="dropdown-item" href="{{ route('console.tags.index') }}">Tags</a>
                         <a class="dropdown-item" href="#">Category</a>
                         <a class="dropdown-item" href="#">Data Products</a>
                         <a class="dropdown-item" href="#">Voucher</a>
@@ -72,7 +72,7 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle  text-white"
                         style="padding-top: 13px;line-height: 30px;padding-bottom:9px;text-decoration: none;"
-                        data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> Fika Ridaul Maulayya <span
+                        data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> {{ auth()->user()->name }} <span
                             class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href=""><i class="fa fa-chart-line"></i> Analytic</a>
