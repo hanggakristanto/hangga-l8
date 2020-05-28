@@ -78,9 +78,9 @@
                         data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> {{ auth()->user()->name }}
                         <span class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href=""><i class="fa fa-external-link-alt"></i> View Site</a>
-                        <a class="dropdown-item" href=""><i class="fa fa-chart-line"></i> Analytic</a>
-                        <a class="dropdown-item" href=""><i class="fa fa-cog"></i> Settings</a>
+                        <a class="dropdown-item" href="{{ url('/') }}" target="_blank"><i class="fa fa-external-link-alt"></i> View Site</a>
+                        <a class="dropdown-item" href="{{ route('console.dashboard.index') }}"><i class="fa fa-chart-line"></i> Analytic</a>
+                        <a class="dropdown-item" href="{{ route('console.settings.index') }}"><i class="fa fa-cog"></i> Settings</a>
                         <div class="dropdown-divider"></div>
                         <livewire:console.logout />
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Console;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Logout extends Component
 {
@@ -12,7 +13,7 @@ class Logout extends Component
      */
     public function logout()
     {
-        auth()->logout();
+        Auth::logout();
         return redirect()->route('console.login');
     }
 
