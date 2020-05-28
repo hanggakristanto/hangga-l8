@@ -62,6 +62,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/categories/edit/{id}', 'console.categories.edit')
         ->layout('layouts.console')->name('console.categories.edit');      
         
+        //console sliders
+        Route::livewire('/sliders', 'console.sliders.index')
+        ->layout('layouts.console')->name('console.sliders.index');
+
+        Route::livewire('/sliders/create', 'console.sliders.create')
+        ->layout('layouts.console')->name('console.sliders.create');
+
+        Route::livewire('/sliders/edit/{id}', 'console.sliders.edit')
+        ->layout('layouts.console')->name('console.sliders.edit'); 
+
         //console settings
         Route::livewire('/settings', 'console.settings.index')
         ->layout('layouts.console')->name('console.settings.index');

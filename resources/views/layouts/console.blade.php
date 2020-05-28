@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #252f3f!important">
         <a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><i
-                class="fa fa-shopping-basket"></i> SK STORE</a>
+                class="fa fa-shopping-bag"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,11 +60,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-clone"></i> Pages</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-image"></i> Galeri</a>
-                </li> --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-laptop"></i> Sliders</a>
+                <li class="nav-item {{ setActive('console/sliders') }}">
+                    <a class="nav-link" href="{{ route('console.sliders.index') }}"><i class="fa fa-laptop"></i> Sliders</a>
                 </li>
                 <li class="nav-item {{ setActive('console/users') }}">
                     <a class="nav-link" href="{{ route('console.users.index') }}"><i class="fa fa-users"></i> Users</a>
@@ -96,7 +93,7 @@
         </div>
     </div>
 
-    <div class="container mb-5" style="margin-top: -90px">
+    <div class="container-fluid mb-5" style="margin-top: -90px">
 
         @yield('content')
 
