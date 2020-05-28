@@ -43,7 +43,7 @@
                 <li class="nav-item dropdown {{ setActive('console/tags'). setActive('console/categories'). setActive('console/vouchers') }}">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag"></i> Products</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('console.tags.index') }}">Tags</a>
                         <a class="dropdown-item" href="{{ route('console.categories.index') }}">Categories</a>
                         <a class="dropdown-item" href="#">Data Products</a>
@@ -53,7 +53,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> Orders</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="#">Data Orders</a>
                         <a class="dropdown-item" href="#">Payment Confirmation</a>
                     </div>
@@ -73,11 +73,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
                 <li class="dropdown">
-                    <a class="dropdown-toggle  text-white"
+                    <a class="dropdown-toggle text-white"
                         style="padding-top: 13px;line-height: 30px;padding-bottom:9px;text-decoration: none;"
                         data-toggle="dropdown" href="#"><i class="fa fa-user-circle"></i> {{ auth()->user()->name }}
                         <span class="caret"></span></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu shadow border-0" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ url('/') }}" target="_blank"><i class="fa fa-external-link-alt"></i> View Site</a>
                         <a class="dropdown-item" href="{{ route('console.dashboard.index') }}"><i class="fa fa-chart-line"></i> Analytic</a>
                         <a class="dropdown-item" href="{{ route('console.settings.index') }}"><i class="fa fa-cog"></i> Settings</a>
