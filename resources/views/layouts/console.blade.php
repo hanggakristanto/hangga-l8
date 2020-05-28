@@ -26,7 +26,7 @@
 
 <body style="background-color: #e2e8f0;">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #252f3f!important">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #171d26!important">
         <a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><i
                 class="fa fa-shopping-bag"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -89,7 +89,7 @@
         </div>
     </nav>
 
-    <div class="jumbotron rounded-0" style="background-color: #252f3f;padding-bottom:8rem">
+    <div class="jumbotron rounded-0" style="background-color: #566479;padding-bottom:8rem">
         <div class="container">
         </div>
     </div>

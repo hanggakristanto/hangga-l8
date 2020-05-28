@@ -1,13 +1,13 @@
 .table .thead-dark th {
   color: #fff;
-  background-color: #252f3f;
-  border-color: #252f3f;
+  background-color: #171d26;
+  border-color: #171d26;
 }
 
 .btn-dark {
   color: #fff;
-  background-color: #252f3f;
-  border-color: #252f3f;
+  background-color: #171d26;
+  border-color: #171d26;
 }
 
 .form-group label {
@@ -17,5 +17,17 @@
 .turbolinks-progress-bar {
   height: 3px;
   background-color: white;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #171d25;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: white;
 }
 
