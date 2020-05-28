@@ -139,8 +139,44 @@ Settings &mdash; {{ $setting->admin_title }}
                 <i class="fa fa-image"></i> LOGO
             </div>
             <div class="card-body">
-                <img src="{{ $logo }}">
+                @if($logo)
+                <div class="text-center">
+                    <img src="{{ Storage::url('public/logo/'.$logo) }}" alt="" style="height: 250px;width:100%;object-fit:cover"
+                        class="img-thumbnail">
+                    <p>PREVIEW</p>
+                </div>
+                @else
+                <div class="text-center">
+                    <img src="{{ asset('images/image.png') }}" alt="" style="height: 250px;width:100%;object-fit:cover"
+                        class="img-thumbnail">
+                    <p>PREVIEW</p>
+                </div>
+                @endif
+                <hr>
+                <form wire:submit.prevent="update_logo">
+                    <div class="form-group">
+                        <input type="file" id="image" class="form-control" wire:change="$emit('fileChoosen')" required>
+                        @error('image')
+                        <div class="invalid-feedback d-block">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block mt-4">UPLOAD</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
+<script>
+    window.livewire.on('fileChoosen', () => {
+        let inputField = document.getElementById('image')
+        let file = inputField.files[0]
+        let reader = new FileReader();
+        reader.onloadend = () => {
+            window.livewire.emit('fileUpload', reader.result)
+        }
+        reader.readAsDataURL(file);
+    })
+</script>
