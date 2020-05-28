@@ -11,6 +11,8 @@ class Index extends Component
 {
     use WithPagination;
 
+    public $search;
+
     /**
     * destroy function
     */
@@ -28,10 +30,15 @@ class Index extends Component
         return redirect()->route('console.vouchers.index');
     }
 
+    /**
+     * search
+     */
+    protected $updatesQueryString = ['search'];
+
     public function render()
     {
         return view('livewire.console.vouchers.index', [
-            'vouchers' => Voucher::latest()->paginate(10)
+            'vouchers' => $this->search === null ? Voucher::latest()->paginate(10) : Voucher::where('title', 'like', '%' .$this->search. '%')->latest()->paginate(10)
         ]);
     }
 }

@@ -11,6 +11,8 @@ class Index extends Component
 {
     use WithPagination;
 
+    public $search;
+
     /**
     * destroy function
     */
@@ -28,10 +30,15 @@ class Index extends Component
         return redirect()->route('console.categories.index');
     }
 
+    /**
+     * search
+     */
+    protected $updatesQueryString = ['search'];
+
     public function render()
     {
         return view('livewire.console.categories.index', [
-            'categories' => category::latest()->paginate(10)
+            'categories' => $this->search === null ? Category::latest()->paginate(10) : Category::where('name', 'like', '%' .$this->search. '%')->latest()->paginate(10)
         ]);
     }
 }

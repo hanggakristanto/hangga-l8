@@ -23,7 +23,7 @@ Users &mdash; {{ $setting->admin_title }}
                                 ADD
                             </a>
                         </div>
-                        <input type="text" name="q" placeholder="cari sesuatu disini..." class="form-control">
+                        <input type="text" wire:model="search" placeholder="cari sesuatu disini..." class="form-control">
                         <div class="input-group-append">
                             <button type="submit" class="btn btn-dark"><i class="fa fa-search"></i> SEARCH
                             </button>

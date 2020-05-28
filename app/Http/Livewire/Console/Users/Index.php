@@ -11,6 +11,8 @@ class Index extends Component
 
     use WithPagination;
 
+    public $search;
+
     /**
      * destroy function
      */
@@ -27,10 +29,15 @@ class Index extends Component
         return redirect()->route('console.users.index');
     }
 
+    /**
+     * search
+     */
+    protected $updatesQueryString = ['search'];
+
     public function render()
     {
         return view('livewire.console.users.index', [
-            'users' => User::latest()->paginate(10)
+            'users' => $this->search === null ? User::latest()->paginate(10) : User::where('name', 'like', '%' .$this->search. '%')->latest()->paginate(10)
         ]);
     }
 }
