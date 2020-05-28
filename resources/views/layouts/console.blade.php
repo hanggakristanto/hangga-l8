@@ -40,14 +40,14 @@
                     <a class="nav-link" href="{{ route('console.dashboard.index') }}"><i class="fa fa-chart-line"></i>
                         Analytic</a>
                 </li>
-                <li class="nav-item dropdown {{ setActive('console/tags'). setActive('console/categories') }}">
+                <li class="nav-item dropdown {{ setActive('console/tags'). setActive('console/categories'). setActive('console/vouchers') }}">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag"></i> Products</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('console.tags.index') }}">Tags</a>
                         <a class="dropdown-item" href="{{ route('console.categories.index') }}">Categories</a>
                         <a class="dropdown-item" href="#">Data Products</a>
-                        <a class="dropdown-item" href="#">Voucher</a>
+                        <a class="dropdown-item" href="{{ route('console.vouchers.index') }}">Voucher</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
