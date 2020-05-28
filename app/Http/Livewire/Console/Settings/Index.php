@@ -77,8 +77,8 @@ class Index extends Component
      */
     public function storeImage()
     {
-        $image   = ImageManagerStatic::make($this->logo)->encode('jpg');
-        $name  = Str::random() . '.jpg';
+        $image   = ImageManagerStatic::make($this->logo)->encode('png');
+        $name  = Str::random() . '.png';
         Storage::disk('public')->put('logo/'.$name, $image);
         return $name;
     }
