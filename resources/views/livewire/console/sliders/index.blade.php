@@ -9,7 +9,7 @@ Sliders &mdash; {{ $setting->admin_title }}
             {{ session('message') }}
         </div>
         @endif
-        <div class="card border-0 shadow rounded-lg">
+        <div class="card border-0 shadow-sm rounded-lg">
             <div class="card-header">
                 <i class="fa fa-laptop"></i> SLIDERS
             </div>
@@ -52,7 +52,7 @@ Sliders &mdash; {{ $setting->admin_title }}
             {{ session('error') }}
         </div>
         @endif
-        <div class="card border-0 shadow rounded-lg">
+        <div class="card border-0 shadow-sm rounded-lg">
             <div class="card-header">
                 <i class="fa fa-image"></i> UPLOAD SLIDER
             </div>

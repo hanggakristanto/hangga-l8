@@ -58,8 +58,8 @@
                         <a class="dropdown-item" href="#">Payment Confirmation</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-clone"></i> Pages</a>
+                <li class="nav-item {{ setActive('console/pages') }}">
+                    <a class="nav-link" href="{{ route('console.pages.index') }}"><i class="fa fa-clone"></i> Pages</a>
                 </li>
                 <li class="nav-item {{ setActive('console/sliders') }}">
                     <a class="nav-link" href="{{ route('console.sliders.index') }}"><i class="fa fa-laptop"></i> Sliders</a>
@@ -89,7 +89,7 @@
         </div>
     </nav>
 
-    <div class="jumbotron rounded-0" style="background-color: #a0aec0;padding-bottom:8rem">
+    <div class="jumbotron rounded-0" style="background-color: #252f3f;padding-bottom:8rem">
         <div class="container">
         </div>
     </div>

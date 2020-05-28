@@ -4,7 +4,7 @@ Dashboard &mdash; {{ $setting->admin_title }}
 
 <div class="row justify-content-center">
    <div class="col-md-6 mb-5">
-       <div class="card border-0 shadow rounded-lg">
+       <div class="card border-0 shadow-sm rounded-lg">
            <div class="card-header">
                <i class="fa fa-chart-pie"></i> STATISTIC ORDERS THIS MONTH
            </div>
@@ -13,7 +13,7 @@ Dashboard &mdash; {{ $setting->admin_title }}
        </div>
    </div>
    <div class="col-md-6 mb-5">
-      <div class="card border-0 shadow rounded-lg">
+      <div class="card border-0 shadow-sm rounded-lg">
           <div class="card-header">
               <i class="fa fa-dollar-sign"></i> INFORMATION INCOME
           </div>
@@ -26,7 +26,7 @@ Dashboard &mdash; {{ $setting->admin_title }}
 
 <div class="row justify-content-center">
     <div class="col-md-12">
-        <div class="card border-0 shadow rounded-lg">
+        <div class="card border-0 shadow-sm rounded-lg">
             <div class="card-header">
                 <i class="fa fa-chart-line"></i> STATISTIK ORDERS THIS MONTH
             </div>

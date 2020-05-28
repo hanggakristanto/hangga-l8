@@ -9,7 +9,7 @@ Users &mdash; {{ $setting->admin_title }}
             {{ session('message') }}
         </div>
         @endif
-        <div class="card border-0 shadow rounded-lg">
+        <div class="card border-0 shadow-sm rounded-lg">
             <div class="card-header">
                 <i class="fa fa-users"></i> USERS
             </div>
