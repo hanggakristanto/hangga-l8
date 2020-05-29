@@ -39,7 +39,7 @@
                     </a>
                     <div class="dropdown-menu border-0 shadow-sm dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         @foreach ($global_categories as $category)
-                            <a class="dropdown-item" href="#"><img src="{{ Storage::url('public/categories/'.$category->image) }}" class="rounded" style="width: 20px"> {{ $category->name }}</a>
+                            <a class="dropdown-item" href="{{ route('frontend.category.show', $category->slug) }}"><img src="{{ Storage::url('public/categories/'.$category->image) }}" class="rounded" style="width: 20px"> {{ $category->name }}</a>
                         @endforeach
                     </div>
                 </li>

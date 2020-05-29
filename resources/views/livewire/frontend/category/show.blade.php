@@ -1,49 +1,23 @@
 <div class="mb-5">
-    <div class="container-fluid" style="margin-top: 70px;">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                @php $active = "active" @endphp
-                @foreach ($sliders as $slider)
-                <div class="carousel-item {{ $active }}">
-                    <a href="{{ $slider->link }}">
-                        <img src="{{ Storage::url('public/sliders/').$slider->image }}"
-                            class="d-block w-100 rounded-lg">
-                    </a>
-                </div>
-                {{ $active = "" }}
-                @endforeach
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
+    <div class="container-fluid" style="margin-top: 80px;">
 
-    <div class="container-fluid mt-3">
-        <div class="row text-center">
-            @foreach ($global_categories as $category)
-            <div class="col-4 col-md-2 mb-4">
-                <a href="{{ route('frontend.category.show', $category->slug) }}" class="text-decoration-none text-dark">
-                    <div class="card h-100 border-0 shadow p-2 rounded-lg">
-                        <div class="card-img">
-                            <img src="{{ Storage::url('public/categories/'.$category->image) }}"
-                                class="w-50">
-                            <div class="title-category mt-2 font-weight-bold">{{ $category->name }}</div>
+
+            <div class="jumbotron rounded-lg shadow" style="background-color: #566479;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="card border-0 shadow rounded-full">
+                            <div class="card-body">
+                                <img src="{{ Storage::url('public/categories/'.$category_image) }}" style="width: 70px">
+                            </div>
                         </div>
                     </div>
-                </a>
+                    <div class="text-center text-white mt-3 font-weight-bold" style="font-size: 24px">{{ $category_name }}</div>
+                </div>
             </div>
-            @endforeach
-        </div>
-    </div>
 
-    <div class="container-fluid mt-3">
+
         <div class="row">
+
             @foreach ($products as $product)
 
             @php

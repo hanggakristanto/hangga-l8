@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 //home
-Route::livewire('/', 'frontend.home.index')->layout('layouts.frontend');
-
-    
+Route::livewire('/', 'frontend.home.index')
+->layout('layouts.frontend');
 
     Route::group(['middleware' => 'guest'], function(){
 
@@ -125,3 +124,7 @@ View::composer('*', function($view) {
     $global_categories = \App\Category::latest()->take(6)->get();
     $view->with('global_categories', $global_categories);
 });
+
+//detail category
+Route::livewire('/category/{slug}', 'frontend.category.show')
+->layout('layouts.frontend')->name('frontend.category.show');
