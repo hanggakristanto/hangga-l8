@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Product extends Model
 {
     protected $guarded = [];
 
-    public function products()
+    public function tags()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Tag::class);
     }
 
 }

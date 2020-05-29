@@ -22,6 +22,7 @@ Add Category &mdash; {{ $setting->admin_title }}
                             <div class="text-center">
                                 <img src="{{ $image }}" alt="" style="height: 150px;width:150px;object-fit:cover"
                                     class="img-thumbnail">
+                                    <p>PREVIEW</p>
                             </div>
                             @else
                                 <div class="text-center">
