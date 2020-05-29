@@ -21032,6 +21032,9 @@ $(document).on('turbolinks:load', function () {
   //dropdown menu
   $('.dropdown-toggle').dropdown();
 });
+/**
+ * frontend custom
+ */
 
 /***/ }),
 

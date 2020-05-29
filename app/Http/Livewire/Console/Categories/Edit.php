@@ -75,8 +75,8 @@ class Edit extends Component
             return null;
         }
 
-        $image   = ImageManagerStatic::make($this->image)->encode('jpg');
-        $name  = Str::random() . '.jpg';
+        $image   = ImageManagerStatic::make($this->image)->encode('png');
+        $name  = Str::random() . '.png';
         Storage::disk('public')->put('categories/'.$name, $image);
         return $name;
     }

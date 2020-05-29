@@ -9,7 +9,7 @@ Dashboard &mdash; {{ $setting->admin_title }}
                <i class="fa fa-chart-pie"></i> STATISTIC ORDERS THIS MONTH
            </div>
            <div class="card-body">
-               <div class="row">
+               <div class="row text-center">
                    <div class="col-md-3">
                     <label style="color: red"><i class="fa fa-circle-notch fa-spin"></i> Pending</label>
                     <hr>

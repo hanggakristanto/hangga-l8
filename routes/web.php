@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //home
-Route::livewire('/', 'console.login')->layout('layouts.auth');
+Route::livewire('/', 'frontend.home.index')->layout('layouts.frontend');
 
     //login page
     Route::livewire('/login', 'console.login')
@@ -103,4 +103,9 @@ Route::prefix('console')->group(function () {
 View::composer('*', function($view) {
     $setting = \App\Setting::find(1);
     $view->with('setting', $setting);
+});
+
+View::composer('*', function($view) {
+    $global_categories = \App\Category::latest()->take(6)->get();
+    $view->with('global_categories', $global_categories);
 });
