@@ -25,7 +25,7 @@
 <div class="container-fluid mt-3">
     <div class="row text-center">
         @foreach ($global_categories as $category)
-        <div class="col-6 col-md-2 mb-4">
+        <div class="col-4 col-md-2 mb-4">
             <a href="" class="text-decoration-none text-dark">
                 <div class="card h-100 border-0 shadow-sm p-2">
                     <div class="card-img">
@@ -41,7 +41,7 @@
 
 <div class="container-fluid mt-3">
     <div class="row">
-        <div class="col-md-3 mb-3">
+        <div class="col-6 col-md-3 mb-3">
             <div class="card h-100 border-0 shadow-sm">
                 <div class="card-img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/project-2059615900628317391.appspot.com/o/vegetable-new%2F1562915479497_wortel%20value%20300.jpg?alt=media" class="w-100 rounded-top" style="height: 15em;object-fit:cover">
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-6 col-md-3 mb-3">
             <div class="card h-100 border-0 shadow-sm">
                 <div class="card-img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/project-2059615900628317391.appspot.com/o/vegetable-new%2F1562147976214_curly_lettuce_value_300.jpg?alt=media" class="w-100 rounded-top" style="height: 15em;object-fit:cover">

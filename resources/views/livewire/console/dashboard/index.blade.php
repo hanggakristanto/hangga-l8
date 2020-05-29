@@ -10,25 +10,21 @@ Dashboard &mdash; {{ $setting->admin_title }}
            </div>
            <div class="card-body">
                <div class="row text-center">
-                   <div class="col-md-3">
-                    <label style="color: red"><i class="fa fa-circle-notch fa-spin"></i> Pending</label>
-                    <hr>
-                        <h3 class="font-weight-bold text-center">1</h3>
+                   <div class="col-6 col-md-3 mb-3">
+                    <h3 class="font-weight-bold text-center">1</h3>
+                    <label style="color: red"><i class="fa fa-circle-notch fa-spin"></i> Pending</label>    
                    </div>
-                   <div class="col-md-3">
+                   <div class="col-6 col-md-3 mb-3">
+                    <h3 class="font-weight-bold text-center">3</h3>
                     <label style="color: blue"><i class="fa fa-hourglass-start"></i> Progress</label>
-                    <hr>
-                        <h3 class="font-weight-bold text-center">3</h3>
                    </div>
-                   <div class="col-md-3">
+                   <div class="col-6 col-md-3 mb-3">
+                    <h3 class="font-weight-bold text-center">6</h3>
                     <label style="color: purple"><i class="fa fa-truck"></i> Shipping</label>
-                    <hr>
-                        <h3 class="font-weight-bold text-center">6</h3>
                    </div>
-                   <div class="col-md-3">
+                   <div class="col-6 col-md-3 mb-3">
+                    <h3 class="font-weight-bold text-center">10</h3>
                     <label style="color: green"><i class="fa fa-check-circle"></i> Completed</label>
-                    <hr>
-                        <h3 class="font-weight-bold text-center">10</h3>
                    </div>
                </div>
            </div>
@@ -41,15 +37,13 @@ Dashboard &mdash; {{ $setting->admin_title }}
           </div>
           <div class="card-body">
              <div class="row">
-                 <div class="col-md-6">
+                 <div class="col-6 col-md-6 mb-3">
+                    <h3 class="font-weight-bold">Rp. 850.000</h3>
                     <label>INCOME THIS MONTH</label>
-                    <hr>
-                        <h3 class="font-weight-bold">Rp. 850.000</h3>
                  </div>
-                 <div class="col-md-6">
+                 <div class="col-6 col-md-6 mb-3">
+                    <h3 class="font-weight-bold">Rp. 6000.000</h3>
                     <label>ALL INCOME</label>
-                    <hr>
-                        <h3 class="font-weight-bold">Rp. 6000.000</h3>
                 </div>
              </div>
           </div>
