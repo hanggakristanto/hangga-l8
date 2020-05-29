@@ -1,1 +1,1 @@
-<a href="" class="dropdown-item" wire:click="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+<a class="dropdown-item" wire:click="logout" style="cursor: pointer"><i class="fa fa-sign-out-alt"></i> Logout</a>

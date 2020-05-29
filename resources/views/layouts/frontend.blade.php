@@ -26,7 +26,7 @@
 
 <body style="background-color: #e2e8f0;">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white" style="background-color: #171d26!important;">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-white mb-5" style="background-color: #171d26!important;">
         <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-shopping-bag"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5">
             <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                     </div>
                 </li>
             </ul>
-            <form class="mx-2 my-auto d-inline" style="width: 69%">
+            <form class="mx-2 my-auto d-inline" style="width: 55%">
                 <div class="input-group">
                     <input type="text" class="form-control border border-right-0" placeholder="Search...">
                     <span class="input-group-append">
@@ -55,8 +55,11 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item ml-3 mr-3">
+                    <button class="btn btn-md btn-outline-dark btn-block" style="color: #333;background-color: #fff;border-color: #fff;"><i class="fa fa-shopping-basket"></i> 0 | Rp. 0</button>
+                </li>
                 <li class="nav-item">
-                    <button class="btn btn-md btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> LOGIN / REGISTER</button>
+                    <button class="btn btn-md btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> ACCOUNT</button>
                 </li>
             </ul>
         </div>

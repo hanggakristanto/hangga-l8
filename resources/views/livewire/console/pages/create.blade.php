@@ -22,7 +22,7 @@ Add Page &mdash; {{ $setting->admin_title }}
                         @enderror
                     </div>
 
-                    <div class="form-group">
+                    <div wire:ignore class="form-group">
                         <label>Content</label>
                         <textarea class="form-control @error('content') is-invalid @enderror" id="content" placeholder="Content Page"
                             rows="8" wire:model="content">{{ $content }}</textarea>
@@ -62,3 +62,9 @@ Add Page &mdash; {{ $setting->admin_title }}
         </div>
     </div>
 </div>
+<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('content').on('change', function(e){
+        @this.set('{{ $content }}', e.editor.getData());
+    });
+</script>

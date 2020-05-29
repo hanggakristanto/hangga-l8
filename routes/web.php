@@ -16,17 +16,23 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::livewire('/', 'frontend.home.index')->layout('layouts.frontend');
 
-    //login page
-    Route::livewire('/login', 'console.login')
-    ->layout('layouts.auth')->name('console.login');
+    
 
-Route::prefix('console')->group(function () {
+    Route::group(['middleware' => 'guest'], function(){
 
-    Route::group(['middleware' => 'auth'], function(){
+        //login page
+        Route::livewire('/login', 'console.login')
+        ->layout('layouts.auth')->name('console.login');
 
         //logout page
         Route::livewire('/logout', 'console.logout')
         ->layout('layouts.console')->name('console.logout');
+
+    });
+
+Route::prefix('console')->group(function () {
+
+    Route::group(['middleware' => 'auth'], function(){
 
         //console dashboard
         Route::livewire('/dashboard', 'console.dashboard.index')

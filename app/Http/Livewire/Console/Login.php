@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Console;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Login extends Component
 {
@@ -23,7 +24,7 @@ class Login extends Component
             'password'  => 'required'
         ]);
 
-        if(auth()->attempt(['email' => $this->email, 'password'=> $this->password])) {
+        if(Auth::attempt(['email' => $this->email, 'password'=> $this->password])) {
 
             return redirect()->route('console.dashboard.index');
 

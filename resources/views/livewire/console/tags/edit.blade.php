@@ -4,7 +4,7 @@ Edit Tag &mdash; {{ $setting->admin_title }}
 
 <div class="row justify-content-center">
     <div class="col-md-12">
-        <div class="card border-0 shadow-sm rounded-lg">
+        <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
                 <i class="fa fa-tags"></i> EDIT TAG
             </div>
