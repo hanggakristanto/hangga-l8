@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -135,8 +136,13 @@ Route::prefix('customer')->group(function () {
 
     Route::group(['middleware' => 'auth:customer'], function(){
 
+        //dashboard
         Route::livewire('/dashboard', 'customer.dashboard.index')
         ->layout('layouts.frontend')->name('customer.dashboard.index');
+
+        //profile
+        Route::livewire('/profile', 'customer.profile.index')
+        ->layout('layouts.frontend')->name('customer.profile.index');
 
     });
 });

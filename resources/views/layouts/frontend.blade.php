@@ -90,6 +90,13 @@
         </div>
     </nav>
 
+    @if (Auth::guard('customer')->check() && request()->segment(1) == "customer")
+        <div class="jumbotron rounded-0" style="background-color: #566479;padding-bottom:8rem">
+            <div class="container">
+            </div>
+        </div>
+    @endif
+
     <div class="container-fluid mb-5">
 
         @yield('content')
