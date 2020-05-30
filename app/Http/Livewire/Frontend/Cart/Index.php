@@ -19,6 +19,7 @@ class Index extends Component
     {
         $this->cart = Cart::get();
         
+        //if cart empty
         if(count(Cart::get()['products']) == 0) {
             return redirect()->route('root');
         }
