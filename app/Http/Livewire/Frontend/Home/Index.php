@@ -29,6 +29,8 @@ class Index extends Component
     {
         Cart::add(Product::where('id', $productId)->first());
         $this->emit('addToCart');
+        //alert message
+        $this->emit('alert', ['type' => 'success', 'message' => 'Product added to cart.']);
     }
 
     public function render()

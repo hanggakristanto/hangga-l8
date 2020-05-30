@@ -34,6 +34,8 @@ class Index extends Component
         Cart::remove($productId);
         $this->cart = Cart::get();
         $this->emit('removeCart');
+        //alert message
+        $this->emit('alert', ['type' => 'success', 'message' => 'Product remove from cart.']);
     }
 
     public function render()
