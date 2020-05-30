@@ -12,16 +12,6 @@ Login &mdash; {{ $setting->site_title }}
                         Or <a href="{{ route('customer.auth.register') }}" class="text-dark"><u> register for new account</u></a>
                     </p>
                 </div>
-                @if (session()->has('message'))
-                    <div class="alert alert-danger">
-                        {{ session('message') }}
-                    </div>
-                @endif
-                @if (session()->has('notification'))
-                    <div class="alert alert-success">
-                        {{ session('notification') }}
-                    </div>
-                @endif
                 <div class="card border-0 shadow rounded-lg mb-3">
                     <div class="card-body">
                         <form wire:submit.prevent="login">

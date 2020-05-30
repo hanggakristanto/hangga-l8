@@ -30,7 +30,7 @@ class Login extends Component
             return redirect()->route('customer.dashboard.index');
 
         } else {
-            session()->flash('message', 'Your Email Address or Password is incorrect.');
+            session()->flash('error', 'Your Email Address or Password is incorrect.');
             return redirect()->route('customer.auth.login');
         }
     }

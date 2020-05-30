@@ -32,7 +32,7 @@ class Register extends Component
             'password'  => bcrypt($this->password)
         ]);
 
-        session()->flash('notification', 'Register Successfully');
+        session()->flash('success', 'Register Successfully');
 
         return redirect()->route('customer.auth.login');
     }
