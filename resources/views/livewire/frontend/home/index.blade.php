@@ -72,7 +72,7 @@
 
                         <div class="price font-weight-bold mt-3" style="color: #47b04b;font-size:20px">
                             {{ money_id($harga_diskon) }}</div>
-                        <button class="btn btn-success btn-md mt-3 btn-block shadow-md">Beli</button>
+                        <button wire:click="addToCart({{ $product->id }})" class="btn btn-success btn-md mt-3 btn-block shadow-md">Beli</button>
                     </div>
                 </div>
             </div>

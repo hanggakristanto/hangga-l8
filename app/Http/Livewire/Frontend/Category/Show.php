@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Frontend\Category;
 
 use App\Product;
 use App\Category;
+use App\Facades\Cart;
 use Livewire\Component;
 use Illuminate\Http\Request;
 
@@ -32,6 +33,15 @@ class Show extends Component
     public function loadMore()
     {
         $this->perPage = $this->perPage + 4;
+    }
+
+    /**
+     * add To Cart
+     */
+    public function addToCart(int $productId)
+    {
+        Cart::add(Product::where('id', $productId)->first());
+        $this->emit('addToCart');
     }
 
     public function render()

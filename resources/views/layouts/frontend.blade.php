@@ -55,12 +55,10 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item ml-3 mr-3">
-                    <button class="btn btn-md btn-outline-dark btn-block" style="color: #333;background-color: #fff;border-color: #fff;"><i class="fa fa-shopping-basket"></i> 0 | Rp. 0</button>
-                </li>
+                <livewire:frontend.cart.header/>
                 <li class="nav-item">
-                    <button class="btn btn-md btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> ACCOUNT</button>
-                </li>
+                    <button class="btn btn-md shadow btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> ACCOUNT</button>
+                </livewire:frontend.cart.header>
             </ul>
         </div>
     </nav>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::livewire('/', 'frontend.home.index')
-->layout('layouts.frontend');
+->layout('layouts.frontend')->name('root');
 
     Route::group(['middleware' => 'guest'], function(){
 
@@ -128,3 +128,7 @@ View::composer('*', function($view) {
 //detail category
 Route::livewire('/category/{slug}', 'frontend.category.show')
 ->layout('layouts.frontend')->name('frontend.category.show');
+
+//cart
+Route::livewire('/cart', 'frontend.cart.index')
+->layout('layouts.frontend')->name('frontend.cart.index');

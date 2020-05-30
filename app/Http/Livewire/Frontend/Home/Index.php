@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire\Frontend\Home;
 
-use App\Product;
 use App\Slider;
+use App\Product;
+use App\Facades\Cart;
 use Livewire\Component;
 
 class Index extends Component
@@ -19,6 +20,15 @@ class Index extends Component
     public function loadMore()
     {
         $this->perPage = $this->perPage + 4;
+    }
+
+    /**
+     * add To Cart
+     */
+    public function addToCart(int $productId)
+    {
+        Cart::add(Product::where('id', $productId)->first());
+        $this->emit('addToCart');
     }
 
     public function render()
