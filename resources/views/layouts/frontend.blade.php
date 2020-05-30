@@ -73,10 +73,9 @@
                         <div class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('customer.dashboard.index') }}"><i
                                     class="fa fa-tachometer-alt"></i> DASHBOARD</a>
-                            <a class="dropdown-item" href=""><i
-                                    class="fa fa-shopping-cart"></i> MY ORDERS</a>
+                            <a class="dropdown-item" href=""><i class="fa fa-shopping-cart"></i> MY ORDERS</a>
                             <div class="dropdown-divider"></div>
-                            <livewire:customer.auth.logout/>
+                            <livewire:customer.auth.logout />
                         </div>
                 </ul>
                 @else
@@ -91,10 +90,10 @@
     </nav>
 
     @if (Auth::guard('customer')->check() && request()->segment(1) == "customer")
-        <div class="jumbotron rounded-0" style="background-color: #566479;padding-bottom:8rem">
-            <div class="container">
-            </div>
+    <div class="jumbotron rounded-0" style="background-color: #566479;padding-bottom:8rem">
+        <div class="container">
         </div>
+    </div>
     @endif
 
     <div class="container-fluid mb-5">
