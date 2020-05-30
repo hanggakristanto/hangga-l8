@@ -25,7 +25,7 @@ class Index extends Component
             $product->delete();
         }
 
-        session()->flash('message', 'Data deleted successfully.');
+        session()->flash('success', 'Data deleted successfully.');
 
         return redirect()->route('console.products.index');
     }

@@ -58,7 +58,7 @@ class Edit extends Component
                 'description'   => $this->description
             ]);
 
-            session()->flash('message', 'Data updated successfully');
+            session()->flash('success', 'Data updated successfully');
 
             redirect()->route('console.pages.index');
 

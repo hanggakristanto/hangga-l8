@@ -93,9 +93,9 @@ class Index extends Component
         ]);
 
         if($slider) {
-            session()->flash('message', 'Data saved successfully');
+            session()->flash('success', 'Data saved successfully');
         } else {
-            session()->flash('message', 'Data failed to save');
+            session()->flash('error', 'Data failed to save');
         }
 
         redirect()->route('console.sliders.index');
@@ -114,7 +114,7 @@ class Index extends Component
             $slider->delete();
         }
 
-        session()->flash('message', 'Data deleted successfully.');
+        session()->flash('success', 'Data deleted successfully.');
 
         return redirect()->route('console.sliders.index');
     }

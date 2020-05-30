@@ -4,11 +4,6 @@ Settings &mdash; {{ $setting->admin_title }}
 
 <div class="row justify-content-center">
     <div class="col-md-8">
-        @if (session()->has('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-        @endif
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
                 <i class="fa fa-cog"></i> SETTING
@@ -140,11 +135,6 @@ Settings &mdash; {{ $setting->admin_title }}
         </div>
     </div>
     <div class="col-md-4">
-        @if (session()->has('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-        @endif
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
                 <i class="fa fa-image"></i> LOGO

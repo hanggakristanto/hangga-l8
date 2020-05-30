@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <livewire:styles />
     <livewire:scripts />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <style>
         body {
@@ -102,6 +104,13 @@
 
     </div>
 
+    <script>
+        @if(session()->has('success'))
+            toastr.success('{{ session('success') }}')
+        @elseif(session()->has('error'))
+            toastr.error('{{ session('error') }}')
+        @endif
+    </script>
 </body>
 
 </html>

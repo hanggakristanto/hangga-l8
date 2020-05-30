@@ -25,7 +25,7 @@ class Index extends Component
             $voucher->delete();
         }
 
-        session()->flash('message', 'Data deleted successfully.');
+        session()->flash('success', 'Data deleted successfully.');
 
         return redirect()->route('console.vouchers.index');
     }

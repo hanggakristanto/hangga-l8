@@ -46,7 +46,7 @@ class Edit extends Component
                 'slug' => Str::slug($this->name, '-'),
             ]);
 
-            session()->flash('message', 'Data updated successfully');
+            session()->flash('success', 'Data updated successfully');
 
             redirect()->route('console.tags.index');
 

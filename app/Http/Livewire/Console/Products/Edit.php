@@ -182,7 +182,7 @@ class Edit extends Component
 
             }
 
-            session()->flash('message', 'Data updated successfully');
+            session()->flash('success', 'Data updated successfully');
 
             redirect()->route('console.products.index');
 

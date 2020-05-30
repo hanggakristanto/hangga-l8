@@ -135,7 +135,7 @@ class Index extends Component
                 'description'   => $this->description,
             ]);
 
-            session()->flash('message', 'Data updated successfully');
+            session()->flash('success', 'Data updated successfully');
 
             redirect()->route('console.settings.index');
 
@@ -156,7 +156,7 @@ class Index extends Component
                 'logo'   => $this->storeImage()
             ]);
 
-            session()->flash('message', 'Logo updated successfully');
+            session()->flash('success', 'Logo updated successfully');
 
             redirect()->route('console.settings.index');
 

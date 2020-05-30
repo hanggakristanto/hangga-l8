@@ -34,9 +34,9 @@ class Create extends Component
         ]);
 
         if($user) {
-            session()->flash('message', 'Data saved successfully');
+            session()->flash('success', 'Data saved successfully');
         } else {
-            session()->flash('message', 'Data failed to save');
+            session()->flash('error', 'Data failed to save');
         }
 
         redirect()->route('console.users.index');

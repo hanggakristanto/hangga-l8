@@ -29,8 +29,3 @@ Login &mdash; {{ $setting->admin_title }}
         </form>
     </div>
 </div>
-@if (session()->has('message'))
-    <div class="alert alert-danger">
-        {{ session('message') }}
-    </div>
-@endif
