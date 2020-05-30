@@ -29,6 +29,9 @@ Route::livewire('/', 'frontend.home.index')
 
     });
 
+/**
+ * console panel
+ */
 Route::prefix('console')->group(function () {
 
     Route::group(['middleware' => 'auth'], function(){
@@ -114,6 +117,29 @@ Route::prefix('console')->group(function () {
     });
 
 });
+
+
+/**
+ * customer auth
+ */
+Route::livewire('/customer/login', 'customer.auth.login')
+->layout('layouts.frontend')->name('customer.auth.login');
+
+Route::livewire('/customer/register', 'customer.auth.register')
+->layout('layouts.frontend')->name('customer.auth.register');
+
+/**
+ * customer panel
+ */
+Route::prefix('customer')->group(function () {
+
+    Route::group(['middleware' => 'auth:customer'], function(){
+
+
+
+    });
+});
+
 
 View::composer('*', function($view) {
     $setting = \App\Setting::find(1);

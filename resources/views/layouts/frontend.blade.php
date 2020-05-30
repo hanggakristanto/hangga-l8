@@ -57,8 +57,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <livewire:frontend.cart.header/>
                 <li class="nav-item">
-                    <button class="btn btn-md shadow btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> ACCOUNT</button>
-                </livewire:frontend.cart.header>
+                    <a href="{{ route('customer.auth.login') }}" class="btn btn-md shadow btn-outline-dark btn-block" style="color: #fff;background-color: #343a40;border-color: #343a40;"><i class="fa fa-user-circle"></i> ACCOUNT</a>
+                </li>
             </ul>
         </div>
     </nav>
