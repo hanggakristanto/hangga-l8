@@ -135,7 +135,8 @@ Route::prefix('customer')->group(function () {
 
     Route::group(['middleware' => 'auth:customer'], function(){
 
-
+        Route::livewire('/dashboard', 'customer.dashboard.index')
+        ->layout('layouts.frontend')->name('customer.dashboard.index');
 
     });
 });

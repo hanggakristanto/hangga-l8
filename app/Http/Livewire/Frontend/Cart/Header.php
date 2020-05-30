@@ -42,7 +42,7 @@ class Header extends Component
         $this->cartTotalPrice = $totalPrice;
 
         //if cart empty
-        if(count(Cart::get()['products']) == 0) {
+        if($this->cartTotal == 0) {
             return redirect()->route('root');
         }
 

@@ -106,14 +106,99 @@
                 </div>
             </div>
             <div class="col-md-6">
+                @if (Auth::guard('customer')->check())
+
+
+                <div class="card border-0 shadow rounded-md">
+                    <div class="card-body">
+                        <h5><i class="fa fa-user-circle"></i> LENGKAPI DATA PENGIRIMAN</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="font-weight-bold">NAMA LENGKAP</label>
+                                    <input type="text" class="form-control" id="nama_lengkap"
+                                           placeholder="Nama Lengkap">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="font-weight-bold">NO. HP / WHATSAPP</label>
+                                    <input type="number" class="form-control" id="phone"
+                                           placeholder="No. HP / WhatsApp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">PROVINSI</label>
+                            <select class="form-control select-provinsi" name="provinsi">
+                                <option value="">-- pilih provinsi --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">KOTA / KABUPATEN</label>
+                            <select class="form-control select-kota" name="kota">
+                                <option value="">-- pilih kota --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">KECAMATAN</label>
+                            <select class="form-control select-kecamatan" name="kecamatan">
+                                <option value="">-- pilih kecamatan --</option>
+                            </select>
+                        </div>
+                        <div class="form-group d-none" id="courier">
+
+                        </div>
+                        <hr>
+                        <div class="form-group d-none" id="ongkir">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">ALAMAT LENGKAP</label>
+                            <textarea class="form-control" id="alamat" rows="3"
+                                      placeholder="Alamat Lengkap&#10;&#10;Contoh: Perum. Griya Palem Indah, B-17 Jombang Jawa Timur 61419"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">CATATAN</label>
+                            <textarea class="form-control" id="catatan" rows="2"
+                                      placeholder="Catatan Tambahan"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <a class="font-weight-bold text-dark" href="" target="_blank"><i
+                                class="fa fa-info-circle"></i> Lihat Promo Hari ini Disini</a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="voucher"
+                                   placeholder="Masukkan Kode Voucher">
+                            <div class="input-group-append">
+                                <a data-rules="add" href="javascript:void(0);"
+                                   class="btn-voucher btn btn-dark shadow btn-md btn-block">VALIDASI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-lg btn-dark shadow mt-3 btn-block btn-checkout">CHECKOUT
+                </button>
+
+                @else
 
                 <div class="card border-0 shadow rounded-md">
                     <div class="card-body">
                         <h5><i class="fa fa-user-circle"></i> SILAHKAN MASUK / DAFTAR</h5>
                         <hr>
-                        <button data-toggle="modal" data-target="#account" class="btn btn-dark btn-block btn-lg shadow"><i class="fa fa-user-circle"></i> LOGIN / REGISTER</button>
+                        <a href="{{ route('customer.auth.login') }}" class="btn btn-dark btn-block btn-lg shadow"><i class="fa fa-user-circle"></i> LOGIN / REGISTER</a>
                     </div>
                 </div>
+
+                @endif
 
             </div>
         </div>
