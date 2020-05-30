@@ -1,3 +1,7 @@
+@section('title')
+    {{ $setting->site_title }}
+@endsection
+
 <div class="mb-5">
     <div class="container-fluid" style="margin-top: 70px;">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

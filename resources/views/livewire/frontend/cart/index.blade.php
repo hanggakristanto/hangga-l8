@@ -1,3 +1,7 @@
+@section('title')
+Cart &mdash; {{ $setting->site_title }}
+@endsection
+
 <div class="mb-5">
     <div class="container-fluid mb-lg-5" style="margin-top: 80px;">
 
@@ -44,7 +48,7 @@
                                     </td>
                                     <td class="b-none text-right">
                                         <div class="text-right">
-                                            <button wire:click="removeCart({{ $product->id }})" class="btn btn-sm shadow btn-danger">
+                                            <button wire:click="removeCart({{ $product->id }})" class="btn btn-sm shadow btn-danger rounded-full">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </div>

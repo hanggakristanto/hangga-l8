@@ -1,3 +1,7 @@
+@section('title')
+My Profile &mdash; {{ $setting->site_title }}
+@endsection
+
 <div style="margin-top: -120px">
     <div class="container-fluid mb-lg-5 mt-4">
         <div class="row">

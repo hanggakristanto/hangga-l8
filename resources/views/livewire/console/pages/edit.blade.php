@@ -6,7 +6,7 @@ Edit Page &mdash; {{ $setting->admin_title }}
     <div class="col-md-12">
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
-                <i class="fa fa-clone"></i> EDIT PAGE
+                <i class="fa fa-dice-d6"></i> EDIT PAGE
             </div>
             <div class="card-body">
                 <form wire:submit.prevent="update">

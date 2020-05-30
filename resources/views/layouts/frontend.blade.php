@@ -28,7 +28,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-white mb-5"
         style="background-color: #171d26!important;">
-        <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-shopping-bag"></i> SK STORE</a>
+        <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-carrot"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sk">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +49,7 @@
                     </div>
                 </li>
             </ul>
-            <form class="mx-2 my-auto d-inline" style="width: 50%">
+            <form class="mx-2 my-auto d-inline" style="width: 45%">
                 <div class="input-group">
                     <input type="text" class="form-control border border-right-0" placeholder="Search...">
                     <span class="input-group-append">

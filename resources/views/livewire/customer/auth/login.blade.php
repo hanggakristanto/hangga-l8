@@ -1,3 +1,7 @@
+@section('title')
+Login &mdash; {{ $setting->site_title }}
+@endsection
+
 <div style="margin-top: 100px">
     <div class="container mt-5">
         <div class="row justify-content-center">

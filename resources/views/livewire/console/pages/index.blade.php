@@ -11,7 +11,7 @@ Pages &mdash; {{ $setting->admin_title }}
         @endif
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
-                <i class="fa fa-clone"></i> PAGES
+                <i class="fa fa-dice-d6"></i> PAGES
             </div>
             <div class="card-body">
 

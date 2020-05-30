@@ -1,3 +1,7 @@
+@section('title')
+{{ $category_name }} &mdash; {{ $setting->site_title }}
+@endsection
+
 <div class="mb-5">
     <div class="container-fluid" style="margin-top: 80px;">
 
