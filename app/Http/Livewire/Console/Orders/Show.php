@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\Customer\Orders;
+namespace App\Http\Livewire\Console\Orders;
 
 use App\Invoice;
 use Livewire\Component;
-use Illuminate\Support\Facades\Http;
 
 class Show extends Component
 {
-    /**
+        /**
      * public variable
      */
     public $invoice;
@@ -23,6 +22,6 @@ class Show extends Component
 
     public function render()
     {
-        return view('livewire.customer.orders.show');
+        return view('livewire.console.orders.show');
     }
 }

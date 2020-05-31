@@ -55,7 +55,7 @@ Orders &mdash; {{ $setting->admin_title }}
                                 </td>
                                 <td>{{ TanggalID("j M Y", $invoice->created_at) }}</td>
                                 <td class="text-center">
-                                    <a href="" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('console.orders.show', $invoice->id) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-list-ul"></i>
                                     </a>
                                     <a href="" class="btn btn-sm btn-success">
