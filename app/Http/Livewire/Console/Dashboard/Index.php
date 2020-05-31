@@ -12,10 +12,11 @@ class Index extends Component
     public $bulan;
     public $jumlah;
     public $count_order_year;
-    public $count_order_pending_month;
-    public $count_order_progress_month;
-    public $count_order_shipping_month;
-    public $count_order_completed_month;
+    public $count_order_pending_year;
+    public $count_order_review_year;
+    public $count_order_progress_year;
+    public $count_order_shipping_year;
+    public $count_order_completed_year;
     public $total_revenue_month;
     public $total_revenue_all;
 
@@ -30,6 +31,7 @@ class Index extends Component
             ->addSelect(DB::raw('MONTHNAME(created_at) as nama_bulan'))
             ->addSelect(DB::raw('YEAR(created_at) as tahun'))
             ->whereYear('created_at', '=', $year)
+            ->where('status', 'pesanan selesai')
             ->groupBy('bulan')
             ->orderByRaw('bulan ASC')
             ->get();
@@ -44,15 +46,16 @@ class Index extends Component
         }
 
         //total orders this year
-        $this->count_order_year   = Invoice::whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_year   = Invoice::where('status', 'pesanan selesai')->whereYear('created_at', '=', $year)->get()->count();
 
         /**
          * new statistic dashboard
          */
-        $this->count_order_pending_month      = Invoice::where('status', 'menunggu pembayaran')->orWhere('status', 'menunggu konfirmasi')->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)->get()->count();
-        $this->count_order_progress_month     = Invoice::where('status', 'pesanan diproses')->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)->get()->count();
-        $this->count_order_shipping_month     = Invoice::where('status', 'pesanan dikirim')->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)->get()->count();
-        $this->count_order_completed_month    = Invoice::where('status', 'pesanan selesai')->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_pending_year      = Invoice::where('status', 'menunggu pembayaran')->whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_review_year      = Invoice::where('status', 'menunggu konfirmasi')->whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_progress_year     = Invoice::where('status', 'pesanan diproses')->whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_shipping_year     = Invoice::where('status', 'pesanan dikirim')->whereYear('created_at', '=', $year)->get()->count();
+        $this->count_order_completed_year    = Invoice::where('status', 'pesanan selesai')->whereYear('created_at', '=', $year)->get()->count();
 
         /**
          * total revenue

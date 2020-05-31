@@ -39,7 +39,8 @@ Dashboard &mdash; {{ $setting->admin_title }}
                 enabled: false
             },
             xAxis: {
-                categories: @isset($bulan) {!!json_encode($bulan) !!}, @endisset
+                categories: @isset($bulan) {!!json_encode($bulan) !!},
+                @endisset
             },
             exporting: {
                 enabled: false
@@ -57,7 +58,7 @@ Dashboard &mdash; {{ $setting->admin_title }}
             },
             series: [{
                 name: "JUMLAH : {{ $count_order_year }} ORDER DI TAHUN {{ date('Y') }}",
-                data: @isset($jumlah) {!! json_encode($jumlah) !!},
+                data: @isset($jumlah) {!!json_encode($jumlah) !!},
                 @endisset
                 shadow: true,
                 dataLabels: {
@@ -79,52 +80,56 @@ Dashboard &mdash; {{ $setting->admin_title }}
 </script>
 
 <div class="row justify-content-center">
-   <div class="col-md-6 mb-5">
-       <div class="card border-0 shadow rounded-lg">
-           <div class="card-header">
-               <i class="fa fa-chart-pie"></i> STATISTIC ORDERS THIS MONTH
-           </div>
-           <div class="card-body">
-               <div class="row text-center">
-                   <div class="col-6 col-md-3 mb-3">
-                    <h3 class="font-weight-bold text-center">{{ $count_order_pending_month }}</h3>
-                    <label style="color: red"><i class="fa fa-circle-notch fa-spin"></i> Pending</label>    
-                   </div>
-                   <div class="col-6 col-md-3 mb-3">
-                    <h3 class="font-weight-bold text-center">{{ $count_order_progress_month }}</h3>
-                    <label style="color: blue"><i class="fa fa-hourglass-start"></i> Progress</label>
-                   </div>
-                   <div class="col-6 col-md-3 mb-3">
-                    <h3 class="font-weight-bold text-center">{{ $count_order_shipping_month }}</h3>
-                    <label style="color: purple"><i class="fa fa-truck"></i> Shipping</label>
-                   </div>
-                   <div class="col-6 col-md-3 mb-3">
-                    <h3 class="font-weight-bold text-center">{{ $count_order_completed_month }}</h3>
-                    <label style="color: green"><i class="fa fa-check-circle"></i> Completed</label>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   <div class="col-md-6 mb-5">
-      <div class="card border-0 shadow rounded-lg">
-          <div class="card-header">
-              <i class="fa fa-dollar-sign"></i> INFORMATION INCOME
-          </div>
-          <div class="card-body">
-             <div class="row">
-                 <div class="col-6 col-md-6 mb-3">
-                    <h3 class="font-weight-bold">{{ money_id($total_revenue_month) }}</h3>
-                    <label>INCOME THIS MONTH</label>
-                 </div>
-                 <div class="col-6 col-md-6 mb-3">
-                    <h3 class="font-weight-bold">{{ money_id($total_revenue_all) }}</h3>
-                    <label>ALL INCOME</label>
+    <div class="col-md-8 mb-5">
+        <div class="card border-0 shadow rounded-lg">
+            <div class="card-header">
+                <i class="fa fa-chart-pie"></i> STATISTIC ORDERS THIS YEAR
+            </div>
+            <div class="card-body">
+                <div class="row text-center justify-content-center">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h3 class="font-weight-bold text-center">{{ $count_order_pending_year }}</h3>
+                        <label style="color: red"><i class="fa fa-circle-notch fa-spin"></i> Pending</label>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h3 class="font-weight-bold text-center">{{ $count_order_review_year }}</h3>
+                        <label style="color: #ff5722"><i class="fa fa-spinner fa-spin"></i> In Review</label>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h3 class="font-weight-bold text-center">{{ $count_order_progress_year }}</h3>
+                        <label style="color: blue"><i class="fa fa-hourglass-start"></i> Progress</label>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h3 class="font-weight-bold text-center">{{ $count_order_shipping_year }}</h3>
+                        <label style="color: purple"><i class="fa fa-truck"></i> Shipping</label>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h3 class="font-weight-bold text-center">{{ $count_order_completed_year }}</h3>
+                        <label style="color: green"><i class="fa fa-check-circle"></i> Completed</label>
+                    </div>
                 </div>
-             </div>
-          </div>
-      </div>
-  </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card border-0 shadow rounded-lg">
+            <div class="card-header">
+                <i class="fa fa-dollar-sign"></i> INFORMATION INCOME
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-md-12 mb-3">
+                        <h3 class="font-weight-bold">{{ money_id($total_revenue_month) }}</h3>
+                        <label>INCOME THIS MONTH</label>
+                    </div>
+                    <div class="col-12 col-md-12 mb-3">
+                        <h3 class="font-weight-bold">{{ money_id($total_revenue_all) }}</h3>
+                        <label>ALL INCOME</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="row justify-content-center">

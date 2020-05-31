@@ -42,7 +42,7 @@ Orders &mdash; {{ $setting->admin_title }}
                                     @if ($invoice->status == "menunggu pembayaran")
                                         <button class="btn btn-sm btn-danger"><i class="fa fa-circle-notch fa-spin"></i> {{ $invoice->status }}</button>
                                     @elseif($invoice->status == "menunggu konfirmasi")
-                                        <button class="btn btn-sm btn-warning"><i class="fa fa-circle-notch fa-spin"></i> {{ $invoice->status }}</button>
+                                        <button class="btn btn-sm btn-warning"><i class="fa fa-spinner fa-spin"></i> {{ $invoice->status }}</button>
                                     @elseif($invoice->status == "pembayaran tidak valid")
                                         <button class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i> {{ $invoice->status }}</button>
                                     @elseif($invoice->status == "pesanan diproses")
