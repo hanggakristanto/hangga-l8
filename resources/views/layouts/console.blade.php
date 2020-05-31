@@ -58,12 +58,12 @@
                         <a class="dropdown-item" href="{{ route('console.vouchers.index') }}">Voucher</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown {{ setActive('console/orders') }}">
+                <li class="nav-item dropdown {{ setActive('console/orders'). setActive('console/payment') }}">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> Orders</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('console.orders.index') }}">Data Orders</a>
-                        <a class="dropdown-item" href="#">Payment Confirmation</a>
+                        <a class="dropdown-item" href="{{ route('console.payment.index') }}">Payment Confirmation</a>
                     </div>
                 </li>
                 <li class="nav-item {{ setActive('console/pages') }}">

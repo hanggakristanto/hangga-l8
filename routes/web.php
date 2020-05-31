@@ -108,6 +108,10 @@ Route::prefix('console')->group(function () {
         Route::livewire('/orders/{id}', 'console.orders.show')
         ->layout('layouts.console')->name('console.orders.show');
 
+        //console payment
+        Route::livewire('/payment', 'console.payment.index')
+        ->layout('layouts.console')->name('console.payment.index');
+
         //console sliders
         Route::livewire('/sliders', 'console.sliders.index')
         ->layout('layouts.console')->name('console.sliders.index');
