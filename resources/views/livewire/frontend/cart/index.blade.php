@@ -754,7 +754,7 @@ Cart &mdash; {{ $setting->site_title }}
                             $('.btn-checkout').removeAttr('disabled', 'disabled');
                             $('.btn-checkout').html('CHECKOUT');
 
-                            toastr.success('Pesanan Berhasil Dibuat !');
+                            Turbolinks.visit('payment/'+response.data.invoice)
                         }
                     },
                     error: function (response) {
