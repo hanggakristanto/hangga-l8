@@ -59,9 +59,9 @@ Edit Product &mdash; {{ $setting->admin_title }}
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <div class="form-group" wire:ignore>
                                 <label>Category</label>
-                                <select class="form-control @error('category_id') is-invalid @enderror"
+                                <select class="select2 form-control @error('category_id') is-invalid @enderror"
                                     wire:model.lazy="category_id">
                                     <option value="">-- select category --</option>
                                     @foreach ($categories as $row)
@@ -221,4 +221,24 @@ Edit Product &mdash; {{ $setting->admin_title }}
         }
         reader.readAsDataURL(file);
     })
+</script>
+<script>
+    $(document).ready(function() {
+        //category
+        $('.select2').select2({
+                theme: 'bootstrap4',
+                width:'style'
+        });
+        $('.select2').on('change', function (e) {
+            @this.set('category_id', e.target.value);       
+        });
+        //tag
+        $('.tag').select2({
+                theme: 'bootstrap4',
+                width:'style'
+        });
+        $('.tag').on('change', function (e) {
+            @this.set('tag', e.target.value);       
+        });
+    });
 </script>
