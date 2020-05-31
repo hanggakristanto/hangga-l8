@@ -19,11 +19,6 @@ My Profile &mdash; {{ $setting->site_title }}
                     <div class="card-body">
                         <h6 class="font-weight-bold"><i class="fa fa-user-circle"></i> MY PROFILE</h6>
                         <hr>
-                        @if (session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session('message') }}
-                        </div>
-                        @endif
                         <form wire:submit.prevent="update">
                             <input type="hidden" wire:model="customerId">
                             <div class="row">

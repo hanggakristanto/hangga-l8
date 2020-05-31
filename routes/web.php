@@ -158,6 +158,18 @@ View::composer('*', function($view) {
     $view->with('global_categories', $global_categories);
 });
 
+/**
+ * api waybill
+ */
+Route::get('/provinces', 'ApiController@getProvinces');
+Route::get('/cities', 'ApiController@getCities');
+Route::get('/districts', 'ApiController@getDistricts');
+Route::post('/shipping', 'ApiController@getShipping');
+Route::get('/check_voucher', 'ApiController@check_voucher');
+Route::post('/checkout', 'ApiController@checkout');
+
+
+
 //detail category
 Route::livewire('/category/{slug}', 'frontend.category.show')
 ->layout('layouts.frontend')->name('frontend.category.show');
