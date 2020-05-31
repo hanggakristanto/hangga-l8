@@ -146,7 +146,8 @@ class ApiController extends Controller
                 'product_id'    => $cart->id,
                 'product_name'  => $cart->title,
                 'image'         => $cart->image,
-                'qty'           => 1,
+                'unit'          => $cart->unit,
+                'unit_weight'   => $cart->unit_weight,
                 'price'         => $harga_diskon,
             ]);
 

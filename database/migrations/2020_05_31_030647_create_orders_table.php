@@ -20,7 +20,8 @@ class CreateOrdersTable extends Migration
             $table->integer('product_id');
             $table->string('product_name');
             $table->string('image');
-            $table->integer('qty');
+            $table->string('unit');
+            $table->integer('unit_weight');
             $table->integer('price');
             $table->timestamps();
         });

@@ -1,5 +1,5 @@
 @section('title')
-Dashboard &mdash; {{ $setting->site_title }}
+My Orders &mdash; {{ $setting->site_title }}
 @endsection
 
 <div style="margin-top: -120px">
@@ -52,7 +52,7 @@ Dashboard &mdash; {{ $setting->site_title }}
                                             @endif
                                         </td>
                                         <td class="text-center" style="width: 20%">
-                                            <a href="" data-toggle="tooltip" data-placement="top" title="Detail" class="btn btn-sm btn-primary">
+                                            <a href="{{ route('customer.orders.show', $invoice->id) }}" data-toggle="tooltip" data-placement="top" title="Detail" class="btn btn-sm btn-primary">
                                                 <i class="fa fa-list-ul"></i>
                                             </a>
                                             @if ($invoice->status == "menunggu pembayaran" || $invoice->status == "pembayaran tidak valid")
