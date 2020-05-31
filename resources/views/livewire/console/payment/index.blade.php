@@ -39,7 +39,7 @@ Payment &mdash; {{ $setting->admin_title }}
                                 <td class="text-right">{{ money_id($payment->total) }}</td>
                                 <td>{{ TanggalID("j M Y", $payment->created_at) }}</td>
                                 <td class="text-center">
-                                    <a href="" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('console.payment.show', $payment->id) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-list-ul"></i>
                                     </a>
                                 </td>
