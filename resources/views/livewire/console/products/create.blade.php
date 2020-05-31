@@ -91,12 +91,12 @@ Add Product &mdash; {{ $setting->admin_title }}
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" wire:ignore>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Content Product</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" rows="6"
-                                    wire:model.lazy="content" placeholder="Content">{{ $content }}</textarea>
+                                    wire:model.lazy="content" placeholder="Content" id="content">{{ $content }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -236,5 +236,11 @@ Add Product &mdash; {{ $setting->admin_title }}
         $('.tag').on('change', function (e) {
             @this.set('tag', e.target.value);
         });
+    });
+</script>
+<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('content').on('change', function(e){
+        @this.set('content', e.editor.getData());
     });
 </script>
