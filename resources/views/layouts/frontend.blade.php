@@ -71,7 +71,7 @@
                         <div class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('customer.dashboard.index') }}"><i
                                     class="fa fa-tachometer-alt"></i> DASHBOARD</a>
-                            <a class="dropdown-item" href=""><i class="fa fa-shopping-cart"></i> MY ORDERS</a>
+                            <a class="dropdown-item" href="{{ route('customer.orders.index') }}"><i class="fa fa-shopping-cart"></i> MY ORDERS</a>
                             <div class="dropdown-divider"></div>
                             <livewire:customer.auth.logout />
                         </div>

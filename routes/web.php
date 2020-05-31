@@ -140,6 +140,10 @@ Route::prefix('customer')->group(function () {
         Route::livewire('/dashboard', 'customer.dashboard.index')
         ->layout('layouts.frontend')->name('customer.dashboard.index');
 
+        //orders
+        Route::livewire('/orders', 'customer.orders.index')
+        ->layout('layouts.frontend')->name('customer.orders.index');
+
         //profile
         Route::livewire('/profile', 'customer.profile.index')
         ->layout('layouts.frontend')->name('customer.profile.index');
