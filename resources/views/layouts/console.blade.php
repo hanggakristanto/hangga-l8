@@ -52,18 +52,18 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag"></i> Products</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="{{ route('console.tags.index') }}">Tags</a>
-                        <a class="dropdown-item" href="{{ route('console.categories.index') }}">Categories</a>
-                        <a class="dropdown-item" href="{{ route('console.products.index') }}">Data Products</a>
-                        <a class="dropdown-item" href="{{ route('console.vouchers.index') }}">Voucher</a>
+                        <a class="dropdown-item" href="{{ route('console.tags.index') }}"><i class="fa fa-tags"></i> Tags</a>
+                        <a class="dropdown-item" href="{{ route('console.categories.index') }}"><i class="fa fa-folder"></i> Categories</a>
+                        <a class="dropdown-item" href="{{ route('console.products.index') }}"><i class="fa fa-shopping-bag"></i> Data Products</a>
+                        <a class="dropdown-item" href="{{ route('console.vouchers.index') }}"><i class="fa fa-award"></i> Voucher</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown {{ setActive('console/orders'). setActive('console/payment') }}">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> Orders</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="{{ route('console.orders.index') }}">Data Orders</a>
-                        <a class="dropdown-item" href="{{ route('console.payment.index') }}">Payment Confirmation</a>
+                        <a class="dropdown-item" href="{{ route('console.orders.index') }}"><i class="fa fa-shopping-cart"></i> Data Orders</a>
+                        <a class="dropdown-item" href="{{ route('console.payment.index') }}"><i class="fa fa-credit-card"></i> Payment Confirmation</a>
                     </div>
                 </li>
                 <li class="nav-item {{ setActive('console/pages') }}">

@@ -6,7 +6,7 @@ Payment &mdash; {{ $setting->admin_title }}
     <div class="col-md-12">
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
-                <i class="fa fa-dice-d6"></i> PAYMENT
+                <i class="fa fa-credit-card"></i> PAYMENT
             </div>
             <div class="card-body">
 
