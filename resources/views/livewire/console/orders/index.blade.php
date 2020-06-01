@@ -58,7 +58,7 @@ Orders &mdash; {{ $setting->admin_title }}
                                     <a href="{{ route('console.orders.show', $invoice->id) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-list-ul"></i>
                                     </a>
-                                    <a href="" class="btn btn-sm btn-success">
+                                    <a href="{{ route('console.orders.status', $invoice->id) }}" class="btn btn-sm btn-success">
                                         <i class="fa fa-exchange-alt"></i>
                                     </a>
                                     <a href="" class="btn btn-sm btn-warning">
