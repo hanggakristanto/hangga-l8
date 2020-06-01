@@ -111,6 +111,9 @@ Route::prefix('console')->group(function () {
         Route::livewire('/orders/status/{id}', 'console.orders.status')
         ->layout('layouts.console')->name('console.orders.status');
 
+        Route::livewire('/orders/receipt/{id}', 'console.orders.receipt')
+        ->layout('layouts.console')->name('console.orders.receipt');
+
         //console payment
         Route::livewire('/payment', 'console.payment.index')
         ->layout('layouts.console')->name('console.payment.index');
