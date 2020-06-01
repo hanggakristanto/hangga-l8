@@ -194,7 +194,7 @@ Route::get('/districts', 'ApiController@getDistricts');
 Route::post('/shipping', 'ApiController@getShipping');
 Route::get('/check_voucher', 'ApiController@check_voucher');
 Route::post('/checkout', 'ApiController@checkout');
-
+Route::post('/waybill', 'ApiController@getWaybill');
 
 
 //detail category

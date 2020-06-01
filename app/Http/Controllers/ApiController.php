@@ -80,6 +80,23 @@ class ApiController extends Controller
     }
 
     /**
+     * get waybill
+     */
+    public function getWaybill(Request $request)
+    {
+        $response = Http::withHeaders([
+            'accept' => 'application/json',
+            'authorization' => env('RUANGAPI_KEY'),
+            'content-type' => 'application/json',
+        ])->post('https://ruangapi.com/api/v1/waybill', [
+            'waybill' => $request->no_resi,
+            'courier' => $request->courier
+        ]);
+
+        return $response;
+    }
+
+    /**
      * check voucher
      */
     public function check_voucher(Request $request)
