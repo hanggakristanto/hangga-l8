@@ -135,6 +135,11 @@ Settings &mdash; {{ $setting->admin_title }}
         </div>
     </div>
     <div class="col-md-4">
+        @if (session()->has('error_image'))
+        <div class="alert alert-danger">
+            {{ session('error_image') }}
+        </div>
+        @endif
         <div class="card border-0 shadow rounded-lg">
             <div class="card-header">
                 <i class="fa fa-image"></i> LOGO

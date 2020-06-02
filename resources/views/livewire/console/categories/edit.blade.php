@@ -4,9 +4,9 @@ Edit Category &mdash; {{ $setting->admin_title }}
 
 <div class="row justify-content-center">
     <div class="col-md-12">
-        @if (session()->has('error'))
+        @if (session()->has('error_image'))
         <div class="alert alert-danger">
-            {{ session('error') }}
+            {{ session('error_image') }}
         </div>
         @endif
         <div class="card border-0 shadow rounded-lg">

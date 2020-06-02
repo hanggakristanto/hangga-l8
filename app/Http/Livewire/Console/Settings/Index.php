@@ -40,7 +40,7 @@ class Index extends Component
             if($this->getFileInfo($file)["file_type"] == "image"){
                 $this->logo = $file;
             }else{
-                session()->flash("error", "Uploaded file must be an image");
+                session()->flash("error_image", "Uploaded file must be an image");
             }
         } catch (Exception $ex) {
             
