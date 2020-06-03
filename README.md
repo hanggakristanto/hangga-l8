@@ -42,6 +42,9 @@ Menjalankan Seeder
     composer dump-autoload
     php artisan db:seed
 
+Symlink Storage
+
+    php artisan storage:link
 
 Menjalankan Aplikasi
 
