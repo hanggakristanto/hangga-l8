@@ -37,11 +37,18 @@ Migrasi Database
 
     php artisan migrate
 
+Menjalankan Seeder
+
+    composer dump-autoload
+    php artisan db:seed
+
+
 Menjalankan Aplikasi
 
     php artisan serve
 
 Website akan dijalankan menggunakan port 8000, silahkan bisa membukanya dengan mengetikan http://localhost:8000
+
 
 ## Roadmap Update
 
