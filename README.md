@@ -52,6 +52,17 @@ Menjalankan Aplikasi
 
 Website akan dijalankan menggunakan port 8000, silahkan bisa membukanya dengan mengetikan http://localhost:8000
 
+### Daftar RUANGAPI untuk mengaktifkan kurir & tracking otomatis
+
+silahkan daftar di https://ruangapi.com, setelah berhasil mendaftar, silahkan disimpan API KEY NYA.
+
+### Menambahkan RUANGAPI di Toko Online
+
+silahkan tambahkan variabel dibawah ini di dalam file .env dan isi variabelnya dengan API Key yang sudah didapatkan sebelumnya
+
+    RUANGAPI_KEY=isi_key_api_kamu_disini
+
+
 
 ## Roadmap Update
 
