@@ -20,7 +20,7 @@ Edit Product &mdash; {{ $setting->admin_title }}
                         <div class="col-md-12">
                             @if($image)
                             <div class="text-center">
-                                <img src="{{ $image }}" alt="" style="height: 150px;width:150px;object-fit:cover"
+                                <img src="{{ $image->temporaryUrl() }}" alt="" style="height: 150px;width:150px;object-fit:cover"
                                     class="img-thumbnail">
                                 <p>PREVIEW</p>
                             </div>
@@ -39,7 +39,7 @@ Edit Product &mdash; {{ $setting->admin_title }}
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Image</label>
-                                <input type="file" id="image" class="form-control" wire:change="$emit('fileChoosen')">
+                                <input type="file" id="image" class="form-control" wire:model="image">
                                 @error('image')
                                 <div class="invalid-feedback d-block">
                                     {{ $message }}
@@ -216,17 +216,6 @@ Edit Product &mdash; {{ $setting->admin_title }}
         </div>
     </div>
 </div>
-<script>
-    window.livewire.on('fileChoosen', () => {
-        let inputField = document.getElementById('image')
-        let file = inputField.files[0]
-        let reader = new FileReader();
-        reader.onloadend = () => {
-            window.livewire.emit('fileUpload', reader.result)
-        }
-        reader.readAsDataURL(file);
-    })
-</script>
 <script>
     $(document).ready(function() {
         //category

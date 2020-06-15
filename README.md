@@ -61,7 +61,7 @@ silahkan daftar di https://ruangapi.com, setelah berhasil mendaftar, silahkan di
 silahkan tambahkan variabel dibawah ini di dalam file .env dan isi variabelnya dengan API Key yang sudah didapatkan sebelumnya
 
     RUANGAPI_KEY=isi_key_api_kamu_disini
-
+     
 
 
 ## Roadmap Update
